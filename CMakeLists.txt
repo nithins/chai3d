@@ -214,25 +214,25 @@ set (CHAI3D_SOURCE_DIR ${PROJECT_SOURCE_DIR})
 # optional extras
 #
 
-# GLFW
-if (EXISTS ${PROJECT_SOURCE_DIR}/extras/GLFW)
-  add_subdirectory (${PROJECT_SOURCE_DIR}/extras/GLFW)
-endif ()
+# # GLFW
+# if (EXISTS ${PROJECT_SOURCE_DIR}/extras/GLFW)
+  # add_subdirectory (${PROJECT_SOURCE_DIR}/extras/GLFW)
+# endif ()
 
 
-#
-# executables
-#
+# #
+# # executables
+# #
 
-# examples
-if (EXISTS ${PROJECT_SOURCE_DIR}/examples)
-  add_subdirectory (${PROJECT_SOURCE_DIR}/examples)
-endif ()
+# # examples
+# if (EXISTS ${PROJECT_SOURCE_DIR}/examples)
+  # add_subdirectory (${PROJECT_SOURCE_DIR}/examples)
+# endif ()
 
-# utilities
-if (EXISTS ${PROJECT_SOURCE_DIR}/utils)
-  add_subdirectory (${PROJECT_SOURCE_DIR}/utils)
-endif ()
+# # utilities
+# if (EXISTS ${PROJECT_SOURCE_DIR}/utils)
+  # add_subdirectory (${PROJECT_SOURCE_DIR}/utils)
+# endif ()
 
 
 #
