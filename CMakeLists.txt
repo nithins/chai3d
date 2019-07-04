@@ -214,25 +214,27 @@ set (CHAI3D_SOURCE_DIR ${PROJECT_SOURCE_DIR})
 # optional extras
 #
 
-# # GLFW
-# if (EXISTS ${PROJECT_SOURCE_DIR}/extras/GLFW)
-  # add_subdirectory (${PROJECT_SOURCE_DIR}/extras/GLFW)
-# endif ()
+option(CHAI3D_BUILD_GLFW "BUILD CHAI3D GLFW LIB" ON)
+if (${CHAI3D_BUILD_GLFW} AND EXISTS ${PROJECT_SOURCE_DIR}/extras/GLFW)
+  add_subdirectory (${PROJECT_SOURCE_DIR}/extras/GLFW)
+endif ()
 
 
 # #
 # # executables
 # #
 
-# # examples
-# if (EXISTS ${PROJECT_SOURCE_DIR}/examples)
-  # add_subdirectory (${PROJECT_SOURCE_DIR}/examples)
-# endif ()
+# examples
+option(CHAI3D_BUILD_EXAMPLES "BUILD CHAI3D EXAMPLES" ON)
+if (${CHAI3D_BUILD_EXAMPLES} AND EXISTS ${PROJECT_SOURCE_DIR}/examples)
+  add_subdirectory (${PROJECT_SOURCE_DIR}/examples)
+endif ()
 
 # # utilities
-# if (EXISTS ${PROJECT_SOURCE_DIR}/utils)
-  # add_subdirectory (${PROJECT_SOURCE_DIR}/utils)
-# endif ()
+option(CHAI3D_BUILD_UTILS "BUILD CHAI3D UTILS" ON)
+if (${CHAI3D_BUILD_UTILS} AND EXISTS ${PROJECT_SOURCE_DIR}/utils)
+  add_subdirectory (${PROJECT_SOURCE_DIR}/utils)
+endif ()
 
 
 #
